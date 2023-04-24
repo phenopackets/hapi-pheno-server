@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.hot-ecosystem</groupId>
-    <artifactId>tims-hapi-build</artifactId>
+    <groupId>com.github.phenopackets</groupId>
+    <artifactId>hapi-pheno-server</artifactId>
     <version>v6.4.0-b1-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -29,6 +29,12 @@
     </repositories>
 
     <dependencies>
+        <dependency>
+            <groupId>com.essaid.org.monarchinitiative.hapipheno</groupId>
+            <artifactId>hapipheno-core</artifactId>
+            <version>0.4.2-essaid-SNAPSHOT</version>
+        </dependency>
+
         <dependency>
             <groupId>com.essaid.fhir.hapi</groupId>
             <artifactId>hapi-fhir-jpaserver-starter-builds</artifactId>
