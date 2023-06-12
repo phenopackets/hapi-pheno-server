@@ -14,8 +14,8 @@
       <env name="HS_HAPI_ES_USER" value="elastic" />
       <env name="HS_HAPI_PORT" value="28080" />
     </envs>
-    <module name="tims-hapi-build" />
-    <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.hotecosystem.Main" />
+    <module name="hapi-pheno-server" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="org.phenopackets.hapipheno.Main" />
     <option name="WORKING_DIRECTORY" value="file://$ProjectFileDir$/_workdir/dev/hapi_home" />
     <method v="2">
       <option name="Make" enabled="true" />

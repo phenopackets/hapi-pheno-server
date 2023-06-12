@@ -15,7 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <hapi-fhir-jpaserver-starter-builds.version>6.4.0-b1-SNAPSHOT</hapi-fhir-jpaserver-starter-builds.version>
         <hapi-fhir.version>6.4.0</hapi-fhir.version>
-        <hapi-extensions.version>0.1.0-dev-SNAPSHOT</hapi-extensions.version>
+        <hapi-extensions.version>0.2.0-dev-SNAPSHOT</hapi-extensions.version>
     </properties>
 
     <repositories>
@@ -30,20 +30,20 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.essaid.org.monarchinitiative.hapipheno</groupId>
+            <groupId>org.phenopackets.hapipheno</groupId>
             <artifactId>hapipheno-core</artifactId>
-            <version>0.4.2-essaid-SNAPSHOT</version>
+            <version>0.4.2-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <groupId>com.essaid.fhir.hapi</groupId>
-            <artifactId>hapi-fhir-jpaserver-starter-builds</artifactId>
+            <artifactId>hapi-fhir-jpaserver-starter-build</artifactId>
             <version>${hapi-fhir-jpaserver-starter-builds.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.essaid.fhir.hapi</groupId>
-            <artifactId>hapi-fhir-jpaserver-starter-builds</artifactId>
+            <artifactId>hapi-fhir-jpaserver-starter-build</artifactId>
             <version>${hapi-fhir-jpaserver-starter-builds.version}</version>
             <classifier>starter-overlay</classifier>
             <type>war</type>
@@ -76,7 +76,7 @@
                             <goal>repackage</goal>
                         </goals>
                         <configuration>
-                            <mainClass>com.github.hotecosystem.Main</mainClass>
+                            <mainClass>org.phenopackets.hapipheno.Main</mainClass>
                         </configuration>
                     </execution>
                 </executions>
@@ -92,7 +92,7 @@
                         <overlays>
                             <overlay>
                                 <groupId>com.essaid.fhir.hapi</groupId>
-                                <artifactId>hapi-fhir-jpaserver-starter-builds</artifactId>
+                                <artifactId>hapi-fhir-jpaserver-starter-build</artifactId>
                                 <classifier>starter-overlay</classifier>
                                 <type>war</type>
                             </overlay>

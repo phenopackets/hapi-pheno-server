@@ -1,14 +1,19 @@
-package com.github.hotecosystem;
+package org.phenopackets.hapipheno;
 
 import ca.uhn.fhir.jpa.starter.Application;
-import com.essaid.fhir.hapi.ext.component.HapiExitManager;
+import com.essaid.fhir.hapi.ext.HapiExtensionConfiguration;
+import com.essaid.fhir.hapi.ext.server.HapiExitManager;
+import com.essaid.fhir.hapi.ext.server.provider.ShutdownOperation;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
-@Import(Application.class)
+@Import({Application.class,
+        HapiExtensionConfiguration.class,
+        HapiExitManager.class,
+        ShutdownOperation.class})
 public class Main {
 
   public static void main(String[] args) throws InterruptedException {
